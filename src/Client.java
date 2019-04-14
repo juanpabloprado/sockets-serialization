@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
@@ -16,7 +17,7 @@ public class Client {
 			s.writeObject("Today's date");
 			s.writeObject(LocalDate.now());
 			s.flush();
-		} catch (Exception e) {
+		} catch (IOException e) {
 			System.out.println(e.getMessage());
 			System.out.println("Error during serialization");
 			System.exit(1);

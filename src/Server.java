@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInput;
 import java.io.ObjectInputStream;
@@ -24,7 +25,7 @@ public class Server {
 
 			System.out.println(str);
 			System.out.println(date);
-		} catch (Exception e) {
+		} catch (IOException | ClassNotFoundException e) {
 			System.out.println(e.getMessage());
 			System.out.println("Error during serialization");
 			System.exit(1);
